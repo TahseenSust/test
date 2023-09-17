@@ -4,13 +4,13 @@ Goal of the assignment is to create a minimalistic product inventory system.
 This repository contains a stub of the application with the same tech stack
 that our real application is built with:
 
-* [Docker](https://www.docker.com/)
-* [Postgres SQL database](https://www.postgresql.org/)
-* [Hasura GraphQL server](https://hasura.io/)
-* [Typescript](https://www.typescriptlang.org/)
-* [React](https://react.dev/)
-* [Apollo GraphQL client](https://www.apollographql.com/docs/react/)
-* [Ant Design UI library](https://ant.design/)
+- [Docker](https://www.docker.com/)
+- [Postgres SQL database](https://www.postgresql.org/)
+- [Hasura GraphQL server](https://hasura.io/)
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [Apollo GraphQL client](https://www.apollographql.com/docs/react/)
+- [Ant Design UI library](https://ant.design/)
 
 ## Tasks
 
@@ -30,9 +30,8 @@ npm i
 npm start
 
 # start postgres & hasura
-docker compose up
+docker-compose up
 ```
-
 
 Then open http://localhost:3000/ in your browser.
 
