@@ -2,6 +2,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_PRODUCT, GET_PRODUCTS, TOTAL_PRICE, countQuery } from "./graphql";
 import { Form, Input, Button } from "antd";
 import { useForm } from "antd/lib/form/Form";
+import { ProductType } from "./types";
 
 const ProductForm = () => {
   const [addProduct] = useMutation(ADD_PRODUCT, {
@@ -13,7 +14,7 @@ const ProductForm = () => {
   });
   const [form] = useForm();
 
-  const onFinish = async (values: any) => {
+  const onFinish = async (values: ProductType) => {
     // Calling the GraphQL mutation to add the product
     try {
       await addProduct({ variables: values });
@@ -48,7 +49,7 @@ const ProductForm = () => {
       <Form.Item
         name="stock"
         label="Stock"
-        rules={[{ required: true, message: "Please enter the stock" }]}
+        // rules={[{ required: true, message: "Please enter the stock" }]}
       >
         <Input type="number" />
       </Form.Item>
