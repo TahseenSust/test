@@ -33,3 +33,29 @@ export const GET_PRODUCTS = gql`
     }
   }
 `;
+
+export const ADD_PRODUCT = gql`
+  mutation ADD_PRODUCT(
+    $description: String = ""
+    $name: String = ""
+    $price: numeric = ""
+    $stock: Int = 10
+  ) {
+    insert_products(
+      objects: {
+        description: $description
+        name: $name
+        price: $price
+        stock: $stock
+      }
+    ) {
+      returning {
+        description
+        id
+        name
+        price
+        stock
+      }
+    }
+  }
+`;
