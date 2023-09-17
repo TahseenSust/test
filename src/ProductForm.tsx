@@ -9,7 +9,7 @@ const ProductForm = () => {
       { query: GET_PRODUCTS },
       { query: countQuery },
       { query: TOTAL_PRICE },
-    ], // Refetch product list after mutation
+    ], // Refetch queries after mutation
   });
   const [form] = useForm();
 
