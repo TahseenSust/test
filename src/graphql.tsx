@@ -21,3 +21,15 @@ export const TOTAL_PRICE = gql`
     }
   }
 `;
+
+export const GET_PRODUCTS = gql`
+  query GET_ALL_PRODUCT {
+    products {
+      id
+      description
+      name
+      price
+      stock
+    }
+  }
+`;
