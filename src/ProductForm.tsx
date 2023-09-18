@@ -5,7 +5,7 @@ import { useForm } from "antd/lib/form/Form";
 import { ProductType } from "./types";
 
 const ProductForm = () => {
-  const [addProduct] = useMutation(ADD_PRODUCT, {
+  const [addProduct, { loading, error }] = useMutation(ADD_PRODUCT, {
     refetchQueries: [
       { query: GET_PRODUCTS },
       { query: countQuery },
@@ -23,6 +23,9 @@ const ProductForm = () => {
       console.error(error);
     }
   };
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <Form form={form} onFinish={onFinish}>
