@@ -19,15 +19,16 @@ const ProductList = () => {
       dataIndex: "description",
       key: "description",
     },
-    {
-      title: "Stock",
-      dataIndex: "stock",
-      key: "stock",
-    },
+
     {
       title: "Price",
       dataIndex: "price",
       key: "price",
+    },
+    {
+      title: "Stock",
+      dataIndex: "stock",
+      key: "stock",
     },
   ];
 

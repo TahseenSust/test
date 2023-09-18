@@ -39,7 +39,7 @@ export const ADD_PRODUCT = gql`
     $description: String = ""
     $name: String = ""
     $price: numeric = ""
-    $stock: Int = 10
+    $stock: Int = 0
   ) {
     insert_products(
       objects: {
